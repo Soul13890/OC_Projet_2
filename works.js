@@ -1,3 +1,11 @@
+let token = window.sessionStorage.getItem('token');
+
+if(token !== null)
+{
+    const navLogin = document.querySelector(".nav-login");
+    navLogin.innerText = "logout";    
+}
+
 //Récupération des travaux depuis l'API
 const responseWork = await fetch('http://localhost:5678/api/works');   
 let works = await responseWork.json();
