@@ -7,17 +7,68 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 	<meta name="description" content="">
-	<link rel="stylesheet" href="./assets/style.css">
-	<script type="module" src="works.js"></script>	
+	<link rel="stylesheet" href="./assets/style.css">	
+	<script type="module" src="works.js"></script>
+	<script type="module" src="modal.js"></script>
 </head>
-<body>	
-<header>
+<body>
+	<div class="div-modal" style="display: none;">
+		<a href="#modal" class="js-modal"><i class="fa-solid fa-pen-to-square"></i>Mode édition</a>
+		<aside class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="false" aria-labelledby="title-modal" style="display: none;">
+        <div class="modal-wrapper js-modal-stop">
+			<div class="modal-close-container"><button class="js-modal-close"><i class="fa-solid fa-x"></i></button></div>
+            <h1 class="title-modal">Galerie photo</h1>
+			<div class="edit-gallery-container"></div>
+			<div class="separation-bar"></div>
+			<button class="btn-add-photo">Ajouter une photo</button>
+        </div>
+		<div class="modal-wrapper js-modal-stop" style="display: none;">
+			<div class="modal-button-container">
+				<button class="js-modal-return"><i class="fa-solid fa-arrow-left"></i></button>
+				<button class="js-modal-close"><i class="fa-solid fa-x"></i></button>
+			</div>
+			<div class="modal-title-and-error">
+				<h1 class="title-modal">Ajout photo</h1>			
+				<p class="file-big" style="display: none; color: red">Fichier trop volumineux</p>
+				<p class="file-bad" style="display: none; color: red;">Format de fichier invalide</p>
+			</div>            
+			<form action= "#" class="add-photo-form">
+				<div class="add-file-container">
+					<i class="fa-regular fa-image"></i>
+					<input type="file" id="inputFile" required/>
+					<button id="buttonFile">+ Ajouter photo</button>
+					<p>jpg, png : 4mo max</p>
+				</div>
+				<div class="preview-container" style="display: none;">
+					<img class="previewImg" src="#" alt="">
+				</div>
+				<div class="form-inputs">
+					<div class="label">
+						<label for="title">Titre</label>
+						<input type="text" id="title" required>
+					</div>
+					<div class="label">
+						<label for="category">Catégorie</label>
+						<select name="category" id="category-select" required></select>
+					</div>
+				</div>
+				<div class="separation-bar"></div>
+				<div class="submit-container">
+					<button type="submit" class="btn-validation" disabled>Valider</button>
+					<p class="send-validation" style="display: none;">Photo ajouté avec succès</p>
+				</div>
+			</form>
+		</div>
+    	</aside>
+	</div>
+<header>	
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
-			<li>projets</li>
-			<li>contact</li>
+			<li><a href="#portfolio">projets</a></li>
+			<li><a href="#contact">contact</a></li>
 			<li><a href="/login.html" class="nav-login">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
