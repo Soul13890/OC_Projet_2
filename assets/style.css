@@ -125,6 +125,50 @@ li:hover {
 	text-align: center;
 	margin-bottom: 1em;
 }
+
+.filters{
+	display: flex;
+	width: 585px;
+	height: 38px;
+	gap: 10px;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.filters button:not(.active){
+	border-radius: 60px;
+	border: 1px solid #1D6154;
+	color :#1D6154;
+	background-color: white;
+	font-weight: 700;
+	font-size: 16px;
+	font-family: 'Syne';
+	padding: 0px 10px;
+}
+
+.active{
+	color: white;
+	background-color: #1D6154;
+	border-radius: 60px;
+	border: 1px solid #1D6154;
+	font-weight: 700;
+	font-size: 16px;
+	font-family: 'Syne';
+	padding: 0px 10px;
+}
+
+.filters button:hover{
+	color: white;
+	background-color: #1D6154;
+}
+
+.selected{
+	color: white;
+	background-color: #1D6154;
+}
+
 .gallery {
 	width: 100%;
 	display: grid;
