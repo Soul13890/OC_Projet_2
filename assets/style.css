@@ -489,6 +489,7 @@ li:hover {
 #introduction {
 	display: flex;
 	align-items: center;
+	margin: 100px 0;
 }
 #introduction figure {
 	flex: 1
@@ -509,9 +510,24 @@ li:hover {
 #introduction p {
 	margin-bottom: 0.5em;
 }
+
 #portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;	
+}
+
+#portfolio span{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+}
+
+#portfolio span a{
+	text-decoration: none;
+	color: black;
 }
 
 .filters{

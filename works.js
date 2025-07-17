@@ -14,6 +14,8 @@ if(token !== null)
     navLogin.innerText = "logout";
     const divModal = document.querySelector(".div-modal");
     divModal.style.display = null;
+    const btnModify = document.querySelector(".btn-modify");
+    btnModify.style.display = null;
 }
 
 export function generateWorks(works)
