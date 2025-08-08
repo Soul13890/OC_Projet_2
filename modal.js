@@ -193,8 +193,7 @@ const sendForm = async function (e) {
     e.preventDefault();
 
     let fileInput = document.querySelector("#inputFile");
-    let file = fileInput.files[0];
-    let imgContent = document.querySelector(".previewImg");
+    let file = fileInput.files[0];    
     let titleName = document.querySelector("#title");
     let categoryId = document.getElementById("category-select");
 
