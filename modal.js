@@ -226,10 +226,6 @@ const sendForm = async function (e) {
         //Récupération des travaux depuis l'API
         const reponse = await fetch('http://localhost:5678/api/works');    
         let works = await reponse.json();
-        // Transformation des travaux en JSON
-        const valeurWorks = JSON.stringify(works);
-        // Stockage des informations dans le localStorage
-        window.localStorage.setItem("works", valeurWorks);
         generateWorks(works);
         generatePhotos(works);
         generateFilters(works);
